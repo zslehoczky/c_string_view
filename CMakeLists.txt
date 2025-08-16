@@ -9,16 +9,14 @@ add_library(
 STATIC
     compile/c_string_view.cpp
     declare/c_string_view.h
-    define/c_string_view/c_str.hpp
-    define/c_string_view/c_string_view.hpp
+    define/c_string_view/c_string_view_data.hpp
 )
 
 target_include_directories(
     ${PROJECT_NAME}
-INTERFACE
+PUBLIC
     declare
     define
-    private
 )
 
 add_executable(test_${PROJECT_NAME} test/test_c_string_view.cpp)

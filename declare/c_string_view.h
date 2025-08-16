@@ -8,6 +8,8 @@ namespace final {
     public:
         explicit c_string_view(const char *str = "");
 
+        ~c_string_view();
+
         [[nodiscard]] const char *c_str() const;
 
     private:
