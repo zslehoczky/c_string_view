@@ -6,3 +6,5 @@
 cmakecache.txt
 cmake_install.cmake
 makefile
+
+/build/
