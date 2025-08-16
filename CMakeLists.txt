@@ -6,16 +6,13 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_library(
     ${PROJECT_NAME}
-STATIC
-    compile/c_string_view.cpp
-    declare/c_string_view.h
-    define/c_string_view/c_string_view_data.hpp
+INTERFACE
+    define/c_string_view.hpp
 )
 
 target_include_directories(
     ${PROJECT_NAME}
-PUBLIC
-    declare
+INTERFACE
     define
 )
 
