@@ -5,6 +5,6 @@
 namespace final {
 
     inline c_string_view::c_string_view(const char *str)
-            : std::string_view(str) {}
+            : data(std::make_unique<c_string_view_data>(str)) {}
 
 }

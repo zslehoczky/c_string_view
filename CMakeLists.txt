@@ -6,7 +6,8 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_library(
     ${PROJECT_NAME}
-INTERFACE
+STATIC
+    compile/c_string_view.cpp
     declare/c_string_view.h
     define/c_string_view/c_str.hpp
     define/c_string_view/c_string_view.hpp
@@ -17,6 +18,7 @@ target_include_directories(
 INTERFACE
     declare
     define
+    private
 )
 
 add_executable(test_${PROJECT_NAME} test/test_c_string_view.cpp)
