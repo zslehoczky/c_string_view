@@ -1,12 +1,14 @@
 #include <c_string_view.hpp>
 
-#include <iostream>
+#include <cassert>
 
 using namespace final;
 
 int main()
 {
-    c_string_view val("aa");
+    constexpr auto literal = "aa";
 
-    std::cout << val.c_str() << std::endl;
+    c_string_view val(literal);
+
+    assert(val.c_str() == literal);
 }
